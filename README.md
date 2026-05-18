@@ -1,31 +1,81 @@
 # ToxiCheck — Frontend
 
-Interfaz web del detector de mensajes tóxicos.  
+Interfaz web del detector de mensajes tóxicos.
 **Stack:** Next.js 14 · React 18
 
-## Desarrollo local
+---
+
+## Requisitos
+
+- Node.js 18+
+- El backend corriendo en `http://localhost:8000`
+
+---
+
+## Correr localmente
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/Cam1lo27/ToxicCheckAI-PTIA-FrontEnd.git
+cd ToxicCheckAI-PTIA-FrontEnd
+```
+
+2. Instala las dependencias:
 
 ```bash
 npm install
-# Edita .env.local y pon la URL de tu backend:
-# BACKEND_URL=http://localhost:8000
+```
+
+3. Crea el archivo `.env.local` en la raíz con:
+
+```
+BACKEND_URL=http://localhost:8000
+```
+
+4. Levanta el servidor:
+
+```bash
 npm run dev
 ```
 
-Abre: http://localhost:3000
+5. Abre en el navegador: http://localhost:3000
+
+> ⚠️ El backend debe estar corriendo antes de iniciar el frontend.
+
+---
 
 ## Variables de entorno
 
 | Variable | Descripción | Ejemplo |
-|---|---|---|
+|----------|-------------|---------|
 | `BACKEND_URL` | URL del backend FastAPI | `https://toxicheck-api.azurewebsites.net` |
 
-## Despliegue (Vercel)
+---
 
-1. Conecta este repo en vercel.com
-2. Agrega la variable `BACKEND_URL` apuntando a tu backend en Azure
-3. Deploy automático en cada push a `main`
+## Estructura del proyecto
+
+    app/
+    ├── api/
+    │   └── analizar/
+    │       └── route.js        # Proxy al backend
+    ├── globals.css
+    ├── layout.jsx
+    └── page.jsx                # Página principal
+    components/
+    ├── Historial.jsx           # Historial de análisis
+    └── ResultadoCard.jsx       # Tarjeta de resultado
+    .env.local                  # Variables de entorno (no en git)
+    package.json
+
+---
 
 ## Repositorio del backend
 
-→ [toxicheck-backend](https://github.com/TU_USUARIO/toxicheck-backend)
+[ToxicCheckAI-PTIA-BackEnd](https://github.com/Cam1lo27/ToxicCheckAI-PTIA-BackEnd)
+
+---
+
+## Autores
+
+Andrés Camilo Vivas · Daniel Esteban Rodríguez · PTIA Grupo 3
