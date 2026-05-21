@@ -5,6 +5,10 @@ Interfaz web del detector de mensajes tóxicos.
 
 ---
 
+## Despliegue
+
+https://toxic-check-ai-ptia-front-end.vercel.app
+
 ## Requisitos
 
 - Node.js 18+
